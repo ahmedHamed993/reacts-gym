@@ -13,11 +13,12 @@ const ExerciseVideos = ({ exerciseVideos, name}) => {
         alignItems="center" 
         flexWrap="wrap" 
         direction='row'
+        
         sx={{ gap:{lg:"30px", xs:'10px'}}}
       >
         {
           exerciseVideos?.slice(0,3).map((item,index)=>(
-            <a key={index} className="exercise-video" href={`https://www.youtube.com/watch?v=${item.video.videoId}`} target="_blank" rel="noreferrer">
+            <a key={index}  className="exercise-video" href={`https://www.youtube.com/watch?v=${item.video.videoId}`} target="_blank" rel="noreferrer">
               <img src={item.video.thumbnails[0].url} alt={item.video.title} />
               <Box>
                 <Typography variant="h6" color='#000'>{item.video.title.length > 25 ? `${item.video.title.slice(0,30)}...`: item.video.title}</Typography>

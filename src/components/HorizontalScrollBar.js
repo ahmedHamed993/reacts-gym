@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import {Box, Button} from "@mui/material";
+import {Box, Button,Container} from "@mui/material";
 import BodyPart from './BodyPart';
 import Slider from "react-slick";
 import { SampleNextArrow, SamplePrevArrow } from './CarouselArrows';
@@ -45,7 +45,7 @@ const HorizontalScrollBar = ({data, setBodyPart, bodyPart, isBodyParts}) => {
     ]
   };
   return (
-    <>
+    <Container>
         <Slider className="slider" {...settings} sx={{display:'flex', overflow:'hidden', position:"relative"}}>
             {
               data.map(item => (
@@ -55,7 +55,7 @@ const HorizontalScrollBar = ({data, setBodyPart, bodyPart, isBodyParts}) => {
                 )
             }
         </Slider>
-    </>
+    </Container>
   )
 }
 
